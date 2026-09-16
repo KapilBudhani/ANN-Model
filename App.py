@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-from ann_model import train_ann
+from ANN_Model import train_ann
 
 
 @st.cache_resource
