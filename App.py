@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-from ANN_Model import train_ann,predict
+from ann_model import train_ann
 
 
 @st.cache_resource
@@ -55,7 +55,10 @@ if predict_button:
 
     actual = x ** 3
 
-    prediction = predict(x, model)
+    prediction = model.predict(
+        np.array([[x]], dtype=np.float32),
+        verbose=0
+    )[0][0]
 
     st.session_state.x_values.append(x)
     st.session_state.actual_values.append(actual)
