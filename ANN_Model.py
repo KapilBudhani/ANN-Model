@@ -12,7 +12,7 @@ def train_ann():
     model = Sequential([
             Dense(64, activation="leaky_relu", input_shape=(1,)),
             Dense(32, activation="leaky_relu"),
-            Dense(10, activation = "softmax"),
+            Dense(1, activation="leaky_relu"),
     ])
 
     model.compile(
