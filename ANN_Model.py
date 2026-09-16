@@ -10,8 +10,8 @@ def train_ann():
     y = df['y']
     
     model = Sequential([
-            Dense(64, activation="leaky_relu", input_shape=(1,)),
-            Dense(32, activation="leaky_relu"),
+            Dense(64, activation="tanh", input_shape=(1,)),
+            Dense(32, activation="tanh"),
             Dense(1),
     ])
 
